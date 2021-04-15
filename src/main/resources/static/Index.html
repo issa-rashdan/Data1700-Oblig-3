@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>kinobilletter Oblig 2</title>
+    <script src="Index.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1 class="maintitle">Kinobilletter</h1>
+
+            <div id="error"></div>
+            <table id="skjema">
+                <tr>
+                    <td>Velg film:</td>
+                    <td>
+                        <select class="form-control" id="velgFilm">
+                            <option value="Ikke valgt">Velg film </option>
+                            <option>Nimo</option>
+                            <option>Bad Boys 1</option>
+                            <option>Bad Boys 2</option>
+                            <option>Fast & Furious 5</option>
+                            <option>Fast & Furious 8</option>
+                        </select>
+                    </td>
+                    <td><div id="errorFilm"></div></td>
+                </tr>
+                <tr>
+                    <td>Antall billetter:</td>
+                    <td><input class="form-control" type="number" min="1" id="antall"></td>
+                    <td colspan="2" id="Antall1" style="olor:red"></td>
+                </tr>
+
+                <tr><td><br /></td><td></td></tr>
+
+                <tr>
+                    <td>Fornavn:</td>
+                    <td><input class="form-control" type="text" id="fornavn"></td>
+                    <td colspan="2" id="Fornavn1" style="color:red"></td>
+                </tr>
+                <tr>
+                    <td>Etternavn:</td>
+                    <td><input class="form-control" type="text" id="etternavn"></td>
+                    <td colspan="2" id="Etternavn1" style="color:red"></td>
+                </tr>
+                <tr>
+                    <td>Telefon Nr:</td>
+                    <td><input class="form-control" type="text" id="telefon"></td>
+                    <td colspan="2" id="Telefonnr1" style="color:red"></td>
+                </tr>
+                <tr>
+                    <td>Epost:</td>
+                    <td><input class="form-control" type="text" id="epost"></td>
+                    <td colspan="2" id="Epost1" style="color:red"></td>
+                </tr>
+            </table>
+
+            <br /><br />
+            <button class="btn btn-primary" onclick="regBillett()">Kjøp billett</button>
+        </div>
+        <div class="col-md-8">
+            <h2>Alle bestillinger</h2>
+            <div id="tabell"></div>
+            <button class="btn btn-danger" id="Nullstill" onclick="nullstill()">
+                Slett alle bestillingene</button>
+        </div>
+    </div>
+</div>
